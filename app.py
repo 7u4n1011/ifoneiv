@@ -1,17 +1,27 @@
-from flask import Flask, render_template
+from flask import *
 
-app = Flask  (__name__)
+app = Flask(__name__)
 
-
-#codigo a completar
-
-nombre = "nombreDelProyecto"
-
+#página principal
 @app.route('/')
-
 def index():
-    return render_template('index.html', nombre=nombre)
+  return render_template('index.html')
 
+
+#menu pedidos
+@app.route('/pedidos')
+def pedidos():
+  pass
+
+#menu clientes
+@app.route('/clientes')
+def clientes():
+  pass
+
+#menu productos
+@app.route('/productos')
+def productos():
+  pass
 
 if __name__ == '__main__':
-    app.run(debug=True)
+  app.run(debug=True)
