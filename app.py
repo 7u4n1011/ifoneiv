@@ -25,3 +25,19 @@ def productos():
 
 if __name__ == '__main__':
   app.run(debug=True)
+
+
+from flask import *
+
+import mysql.connector
+
+conexion = mysql.connector.connect(
+ host="localhost",
+ user="root",
+ password="root",
+ database=""
+)
+cursor = conexion.cursor()
+
+app = Flask(__name__)
+ 
