@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Clientes</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='estilo.css') }}">
+</head>
+<body>
+    <div class="container" style="background: url('{{ url_for('static', filename='images/background.jpg') }}') no-repeat center center/cover; min-height: 100vh;">
+        <h1>Menu Clientes</h1>
+        <div class="button-container">
+            <button>Cargar Clientes</button>
+            <button>Eliminar Cliente</button>
+            <button>Modificar Cliente</button>
+        </div>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>D.N.I</th>
+                        <th>Id_Cliente</th>
+                        <th>Dirección</th>
+                        <th>Nombre</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>40.222.333</td>
+                        <td>1</td>
+                        <td>sambayon 1361</td>
+                        <td>juanceto01</td>
+                    </tr>
+                    <tr>
+                        <td>41.222.333</td>
+                        <td>2</td>
+                        <td>marroc 465</td>
+                        <td>san luis</td>
+                    </tr>
+                    <tr>
+                        <td>42.333.222</td>
+                        <td>3</td>
+                        <td>menta granizada 32</td>
+                        <td>jaquin</td>
+                    </tr>
+                    <tr>
+                        <td>39.321.123</td>
+                        <td>4</td>
+                        <td>la esquina 123</td>
+                        <td>joan</td>
+                    </tr>
+                    <tr>
+                        <td>45.000.001</td>
+                        <td>5</td>
+                        <td>calle 123</td>
+                        <td>agus</td>
+                    </tr>
+                    <tr>
+                        <td>45.000.002</td>
+                        <td>6</td>
+                        <td>calle 123</td>
+                        <td>mati</td>
+                    </tr>
+                    <tr>
+                        <td>1.002.654</td>
+                        <td>7</td>
+                        <td>viejarbo 96</td>
+                        <td>don ramon</td>
+                    </tr>
+                    <tr>
+                        <td>55.125.879</td>
+                        <td>8</td>
+                        <td>ypf 342</td>
+                        <td>sebastian</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
