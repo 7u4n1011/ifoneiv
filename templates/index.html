@@ -7,10 +7,14 @@
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='estilo.css') }}">
 </head>
 <body>
-    <div class="button-container">
-        <a href="clientes.html" class="button button-1"> Clientes </a>
-        <a href="#" class="button button-2"> Productos </a>
-        <a href="#" class="button button-3"> Pedidos </a>
-    </div>
-</body>
+    <a href="{{ url_for('pedidos')}}">
+      <button>pedidos</button>
+    </a>
+    <a href="{{ url_for('cliente')}}">
+      <button>cliente</button>
+    </a>
+    <a href="{{ url_for('productos')}}">
+      <button>productos</button>
+    </a>
+  </body>
 </html>
