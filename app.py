@@ -80,3 +80,26 @@ def eliminar_cliente():
 
 if __name__ == '__main__':
   app.run(debug=True)
+
+#hecho por juan elizondo
+from flask import *
+
+import mysql.connector
+#conecion de base de datos 
+conexion = mysql.connector.connect(
+  host="localhost",
+  user="root",
+  password="root",
+  database="iphone"
+)
+cursor = conexion.cursor()  
+app = flask(__name__) 
+
+
+#menu productos 
+@app.route('/productos')
+def productos():
+  query="SELECT * FROM producto"
+  cursor.execute(query)
+  productos = cursor.fetvhall()
+  return render_template('producto.html',productos=productos)

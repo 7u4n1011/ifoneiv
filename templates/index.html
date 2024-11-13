@@ -7,6 +7,18 @@
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='estilo.css') }}">
 </head>
 <body>
+  <table>
+    <th>ID</th>
+    <th>Descripcion</th>
+    <th>Precio</th>
+    {% for producto in productos %}
+      <tr>
+      {% for atributo in producto %}
+        <td>{{atributo}}</td>
+      {% endfor %}
+      </tr>
+    {% endfor %}
+  </table>
     <a href="{{ url_for('pedidos')}}">
       <button>pedidos</button>
     </a>
