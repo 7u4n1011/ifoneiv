@@ -1,175 +1,175 @@
-/* Estilos generales para el cuerpo */
-body {
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    background-image: url('/static/images/fondo.png');
-    background-size: cover; /* Ajusta la imagen para que cubra todo el fondo */
-    background-position: center; /* Centra la imagen en el fondo */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
-}
+    /* Estilos generales para el cuerpo */
+    body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        background-image: url('/static/images/fondo.png');
+        background-size: cover; /* Ajusta la imagen para que cubra todo el fondo */
+        background-position: center; /* Centra la imagen en el fondo */
+        background-repeat: no-repeat; /* Evita que la imagen se repita */
+    }
 
-.button-container{
-    display: flex;
-    flex-direction: column; /* Los botones se alinearán en una columna */
-    align-items: flex-end; /* Alinea los botones al lado derecho dentro del contenedor */
-}
+    .button-container{
+        display: flex;
+        flex-direction: column; /* Los botones se alinearán en una columna */
+        align-items: flex-end; /* Alinea los botones al lado derecho dentro del contenedor */
+    }
 
-.button {
-    background-color: #3498db; /* Color de fondo azul */
-    border: none;
-    border-radius: 150px; /* Bordes redondeados */
-    color: white;
-    padding: 40px 80px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 30px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
-    display: block; /* Asegura que cada botón se muestre en una nueva línea */
-    margin-bottom: 10px; /* Espacio entre los botones */
-    margin-left: 350px;
-    margin-right: 150px;
-    margin-top: 130px;
-}
+    .button {
+        background-color: #3498db; /* Color de fondo azul */
+        border: none;
+        border-radius: 150px; /* Bordes redondeados */
+        color: white;
+        padding: 40px 80px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 30px;
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.3s;
+        display: block; /* Asegura que cada botón se muestre en una nueva línea */
+        margin-bottom: 10px; /* Espacio entre los botones */
+        margin-left: 350px;
+        margin-right: 150px;
+        margin-top: 130px;
+    }
 
-.button-1{
-    margin-right: 168px;
-}
+    .button-1{
+        margin-right: 168px;
+    }
 
-.button-3{
-    margin-right: 160px;
-}
+    .button-3{
+        margin-right: 160px;
+    }
 
-/* Efecto de cambio de color al pasar el ratón */
-.button:hover {
-    background-color: #2980b9; /* Color de fondo azul más oscuro */
-    transform: scale(1.05); /* Aumenta ligeramente el tamaño del botón */
-}
+    /* Efecto de cambio de color al pasar el ratón */
+    .button:hover {
+        background-color: #2980b9; /* Color de fondo azul más oscuro */
+        transform: scale(1.05); /* Aumenta ligeramente el tamaño del botón */
+    }
 
-/* Estilos específicos para el primer botón */
-.button-1 {
-    background-color: #e74c3c; /* Rojo */
-}
+    /* Estilos específicos para el primer botón */
+    .button-1 {
+        background-color: #e74c3c; /* Rojo */
+    }
 
-/* Efecto de cambio de color para el primer botón */
-.button-1:hover {
-    background-color: #c0392b; /* Rojo más oscuro */
-}
+    /* Efecto de cambio de color para el primer botón */
+    .button-1:hover {
+        background-color: #c0392b; /* Rojo más oscuro */
+    }
 
-/* Estilos específicos para el segundo botón */
-.button-2 {
-    background-color: #2ecc71; /* Verde */
-}
+    /* Estilos específicos para el segundo botón */
+    .button-2 {
+        background-color: #2ecc71; /* Verde */
+    }
 
-/* Efecto de cambio de color para el segundo botón */
-.button-2:hover {
-    background-color: #27ae60; /* Verde más oscuro */
-}
+    /* Efecto de cambio de color para el segundo botón */
+    .button-2:hover {
+        background-color: #27ae60; /* Verde más oscuro */
+    }
 
-/* Estilos específicos para el tercer botón */
-.button-3 {
-    background-color: #f39c12; /* Naranja */
-}
+    /* Estilos específicos para el tercer botón */
+    .button-3 {
+        background-color: #f39c12; /* Naranja */
+    }
 
-/* Efecto de cambio de color para el tercer botón */
-.button-3:hover {
-    background-color: #e67e22; /* Naranja más oscuro */
-}
-//* Container styling */
-.container {
-    text-align: center;
-    padding: 20px;
-    min-height: 100vh;
-    position: relative; /* Permitir posicionamiento absoluto dentro del contenedor */
-}
+    /* Efecto de cambio de color para el tercer botón */
+    .button-3:hover {
+        background-color: #e67e22; /* Naranja más oscuro */
+    }
+    //* Container styling */
+    .container {
+        text-align: center;
+        padding: 20px;
+        min-height: 100vh;
+        position: relative; /* Permitir posicionamiento absoluto dentro del contenedor */
+    }
 
-/* Title styling */
-h1 {
-    font-size: 2.5em;
-    color: #4a6fa5;
-    margin-bottom: 20px;
-}
+    /* Title styling */
+    h1 {
+        font-size: 2.5em;
+        color: #4a6fa5;
+        margin-bottom: 20px;
+    }
 
-/* Button styling */
-.button-container {
-    position: absolute;
-}
+    /* Button styling */
+    .button-container {
+        position: absolute;
+    }
 
-#cargar {
-    background-color: #4a90e2;
-    color: #fff;
-    border: none;
-    border-radius: 10px;
-    padding: 10px 20px;
-    font-size: 1em;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-}
+    #cargar {
+        background-color: #4a90e2;
+        color: #fff;
+        border: none;
+        border-radius: 10px;
+        padding: 10px 20px;
+        font-size: 1em;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+    }
 
-#modificar {
-    background-color: #4a90e2;
-    color: #fff;
-    border: none;
-    border-radius: 10px;
-    padding: 10px 20px;
-    font-size: 1em;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-}
+    #modificar {
+        background-color: #4a90e2;
+        color: #fff;
+        border: none;
+        border-radius: 10px;
+        padding: 10px 20px;
+        font-size: 1em;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
 
-#eliminar {
-    background-color: #4a90e2;
-    color: #fff;
-    border: none;
-    border-radius: 10px;
-    padding: 10px 20px;
-    font-size: 1em;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-}
+    #eliminar {
+        background-color: #4a90e2;
+        color: #fff;
+        border: none;
+        border-radius: 10px;
+        padding: 10px 20px;
+        font-size: 1em;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+    }
 
-/* Button hover effect */
-.button-container button:hover {
-    background-color: #3a6ca0;
-}
+    /* Button hover effect */
+    .button-container button:hover {
+        background-color: #3a6ca0;
+    }
 
-/* Table styling */
-.table-container {
-    margin: 0 auto;
-    width: 80%;
-    overflow-x: auto;
-}
+    /* Table styling */
+    .table-container {
+        margin: 0 auto;
+        width: 80%;
+        overflow-x: auto;
+    }
 
-table {
-    width: 100%;
-    border-collapse: collapse;
-    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent background */
-    border-radius: 10px;
-    overflow: hidden;
-}
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent background */
+        border-radius: 10px;
+        overflow: hidden;
+    }
 
-th, td {
-    padding: 15px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-}
+    th, td {
+        padding: 15px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
 
-th {
-    background-color: #4a90e2;
-    color: #fff;
-}
+    th {
+        background-color: #4a90e2;
+        color: #fff;
+    }
 
-tr:hover {
-    background-color: #f1f1f1;
-}
+    tr:hover {
+        background-color: #f1f1f1;
+    }

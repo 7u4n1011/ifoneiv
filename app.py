@@ -41,42 +41,55 @@ def cliente():
 
 @app.route('/agregar_cliente', methods=['POST'])
 def agregar_cliente():
-  #obtengo los datos del formulario
-  nombre = request.form.get('nombre')
-  direccion = request.form.get('direccion')
-  dni = request.form.get('dni')
+    nombre = request.form.get('nombre')
+    direccion = request.form.get('direccion')
+    dni = request.form.get('dni')
 
-  #los agrego a la base de datos
-  query = 'INSERT INTO cliente (descripcion, precio) VALUES (%s, %s, %s)'
-  cursor.execute(query, (nombre, direccion, dni))
-  conexion.commit()
-  return redirect(url_for('cliente'))
+    query = 'INSERT INTO cliente (nombre, direccion, dni) VALUES (%s, %s, %s)'
+    cursor.execute(query, (nombre, direccion, dni))
+    conexion.commit()
+    return redirect(url_for('cliente'))
+
 
 @app.route('/modificar_cliente', methods=['POST'])
 def modificar_cliente():
-  #obtengo el id que puso en el formulario
-  ID_cliente = request.form.get('ID')
+    ID_cliente = request.form.get('ID')
+    nombre = request.form.get('nombre')
+    direccion = request.form.get('direccion')
+    dni = request.form.get('dni')
 
-  #obtengo los campos modificados
-  nombre = request.form.get('nombre')
-  direccion = request.form.get('direccion')
-  dni = request.form.get('dni')
+    query = 'UPDATE cliente SET '
+    values = []
+    if nombre:
+        query += 'nombre = %s, '
+        values.append(nombre)
+    if direccion:
+        query += 'direccion = %s, '
+        values.append(direccion)
+    if dni:
+        query += 'dni = %s, '
+        values.append(dni)
 
-  #ejecuto el sql para modificar
-  query = 'UPDATE cliente SET nombre = %s, direccion = %s, dni = %s WHERE ID_cliente = %s'
-  cursor.execute(query, (nombre, direccion, dni, ID_cliente))
-  return redirect(url_for('cliente'))
+    # Elimina la última coma y espacio
+    query = query.rstrip(', ')
+    query += ' WHERE ID_cliente = %s'
+    values.append(ID_cliente)
+
+    cursor.execute(query, tuple(values))
+    conexion.commit()
+    return redirect(url_for('cliente'))
 
 @app.route('/eliminar_cliente', methods=['POST'])
 def eliminar_cliente():
-  #obtengo el id que puso en el formulario
-  ID_cliente = request.form.get('ID')
+    # Obtengo el ID del formulario
+    ID_cliente = request.form.get('ID')
 
-  #hago la query en la base de datos para eliminar el producto de ese ID
-  query = 'DELETE FROM cliente WHERE '+ID_cliente+' = cliente.ID_cliente'
-  cursor.execute(query)
-  conexion.commit()
-  return redirect(url_for('cliente'))
+    # Hago la query en la base de datos para eliminar el producto de ese ID
+    query = 'DELETE FROM cliente WHERE ID_cliente = %s'
+    cursor.execute(query, (ID_cliente,))
+    conexion.commit()
+    return redirect(url_for('cliente'))
+
 
 if __name__ == '__main__':
   app.run(debug=True)

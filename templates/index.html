@@ -11,9 +11,9 @@
     <th>ID</th>
     <th>Descripcion</th>
     <th>Precio</th>
-    {% for producto in productos %}
+    {% for cliente in clientes %}
       <tr>
-      {% for atributo in producto %}
+      {% for atributo in cliente %}
         <td>{{atributo}}</td>
       {% endfor %}
       </tr>
